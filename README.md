@@ -1,55 +1,48 @@
-The Land Price Prediction project uses Machine Learning techniques to predict the market value of land based on various features like location, area, proximity to amenities, and more. Built with Python, the project provides accurate, data-driven insights to assist buyers, sellers, and real estate professionals in making informed decisions.
+# Property Price Prediction Model with NLP and FastAPI
+This is a web application deployed in Heroku using FastAPI Framework that predicts the price of a property based on certain features of the property using machine learning. 
 
-Tech Stack
-Programming Language: Python
+## Model Build Architecture
+![Screenshot](https://github.com/chizeni24/ML-Property-Price-Predictions/blob/main/Deployment%20Approach.png)
 
-Libraries:
+## Features
+The app takes in the following features of the property as input:
 
-Pandas
+- Location: The location of the property
+- Area: The total area of the property in square feet
+- Number of bedrooms: The number of bedrooms in the property
+- Number of bathrooms: The number of bathrooms in the property
+- Age of property: The age of the property in years
+- Type of property: The type of property (apartment, house, etc.)
+- Distance to nearest public transportation: The distance to the nearest public transportation (in miles)
+- Distance to nearest shopping mall: The distance to the nearest shopping mall (in miles), etc.
 
-NumPy
+## Aim
+The app uses a machine learning model to predict the price of the property based on the above input features. The model has been trained on a dataset of properties with known prices and features and predicts range of newly listed properties based on given features 
 
-Scikit-learn
+The model uses a combination of ensemble linear regression to make its predictions. The model has an accuracy of 85% on the test dataset.
 
-Matplotlib / Seaborn (for data visualization)
+## Deployment Architect 
+![Screenshot](https://github.com/chizeni24/ML-Property-Price-Predictions/blob/main/Deployment%20Architecture.png)
+## Requirements
+The app requires Python 3.7 or higher and all the dependencies in the requirement.txt files.
+To install the app, clone this repository and navigate to the root directory of the project. Then run the following command:
 
-Machine Learning Models:
+### Install all required dependencies
+``` markdown
+pip install -r requirements.txt
+```
 
-Linear Regression
+### Execute the code
+``` markdown
+python engine.py 
+```
+```markdown 
+Enter 1 to train the model
+```
+### To run the web application
 
-Decision Tree Regression
+```markdown
+Enter 2 to run the FastAPI app.py file 
+```
 
-Random Forest Regression
-
-Optional: Jupyter Notebook for interactive development
-
-Features
-Data preprocessing and cleaning
-
-Exploratory Data Analysis (EDA) with visualizations
-
-Feature engineering and selection
-
-Model training, validation, and comparison
-
-Price prediction based on user-input features
-
-Model performance evaluation using metrics like RMSE, MAE, and R² Score
-
-How it Works
-Data Collection: Dataset containing land-related features (location, area, road access, nearby facilities, etc.).
-
-Data Preprocessing: Handling missing values, encoding categorical variables, normalizing numerical features.
-
-Model Training: Multiple ML models are trained and evaluated.
-
-Prediction: The best-performing model is used to predict land prices on new, unseen data.
-
-Visualization: Insights and patterns in data are visualized to enhance understanding.
-Setup Instructions
-1. Clone or download the project repository.
-2. Install the required Python libraries:
------------pip install -r requirements.txt
-3. Run the Jupyter Notebook or Python script:
------------jupyter notebook land_price_prediction.ipynb
-4. Follow the instructions in the notebook/script to train the model and make predictions.
+To run the app on FastAPI deployed on my Heroku click [here](https://property-price-predicting-app.herokuapp.com/docs#/default/predict_price_predict_post)  
